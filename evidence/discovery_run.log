@@ -1,0 +1,14 @@
+{"timestamp": 1787844508.1284952, "event": "AGENT_OBSERVE", "data": {"action": "navigate", "target": "http://127.0.0.1:8000"}}
+{"timestamp": 1787844508.5436459, "event": "AGENT_DECIDE_ACT", "data": {"action": "fill", "target": "#f_mem_id", "value": "12345"}}
+{"timestamp": 1787844508.832774, "event": "AGENT_DECIDE_ACT", "data": {"action": "click", "target": "Query Database"}}
+{"timestamp": 1787844509.209047, "event": "AGENT_DECIDE_ACT", "data": {"action": "click", "target": "Open Sub-Account"}}
+{"timestamp": 1787844509.6180549, "event": "AGENT_DECIDE_ACT", "data": {"action": "select", "target": "#sel_prod", "value": "CD_12M"}}
+{"timestamp": 1787844509.884535, "event": "AGENT_DECIDE_ACT", "data": {"action": "fill", "target": "#txt_deposit", "value": "500.00"}}
+{"timestamp": 1787844510.1411111, "event": "AGENT_DECIDE_ACT", "data": {"action": "click", "target": "Submit & Authorize", "irreversible": true}}
+{"timestamp": 1787844920.8779242, "event": "AGENT_OBSERVE", "data": {"action": "navigate", "target": "http://127.0.0.1:8000"}}
+{"timestamp": 1787844921.320864, "event": "AGENT_DECIDE_ACT", "data": {"action": "fill", "target": "#f_mem_id", "value": "12345"}}
+{"timestamp": 1787844921.6153011, "event": "AGENT_DECIDE_ACT", "data": {"action": "click", "target": "Query Database"}}
+{"timestamp": 1787844921.9770439, "event": "AGENT_DECIDE_ACT", "data": {"action": "click", "target": "Open Sub-Account"}}
+{"timestamp": 1787844922.345238, "event": "AGENT_DECIDE_ACT", "data": {"action": "select", "target": "#sel_prod", "value": "CD_12M"}}
+{"timestamp": 1787844922.627302, "event": "AGENT_DECIDE_ACT", "data": {"action": "fill", "target": "#txt_deposit", "value": "500.00"}}
+{"timestamp": 1787844922.888839, "event": "AGENT_DECIDE_ACT", "data": {"action": "click", "target": "Submit & Authorize", "irreversible": true}}

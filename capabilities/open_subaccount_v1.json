@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "capability_name": "open_member_subaccount",
+  "description": "Discovered flow: Look up member ID, submit creation form, verify confirmation.",
+  "target_origin": "http://127.0.0.1:8000",
+  "input_schema": {
+    "member_id": "string",
+    "product_type": "string",
+    "initial_deposit": "string"
+  },
+  "output_schema": {
+    "confirmation_number": "string",
+    "assigned_product": "string"
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "action": "navigate",
+      "target": null,
+      "param_binding": null,
+      "static_value": "http://127.0.0.1:8000",
+      "extract_key": null,
+      "is_irreversible": false,
+      "description": "Navigate to banking console."
+    },
+    {
+      "step_id": 2,
+      "action": "fill",
+      "target": {
+        "role": "textbox",
+        "accessible_name": "Member Account ID:",
+        "text_content": null,
+        "css_fallback": "#f_mem_id",
+        "xpath_fallback": "//input[@id='f_mem_id']"
+      },
+      "param_binding": "member_id",
+      "static_value": null,
+      "extract_key": null,
+      "is_irreversible": false,
+      "description": "Enter Member ID into lookup input."
+    },
+    {
+      "step_id": 3,
+      "action": "click",
+      "target": {
+        "role": "button",
+        "accessible_name": "Query Database",
+        "text_content": null,
+        "css_fallback": "input[value='Query Database']",
+        "xpath_fallback": "//input[@value='Query Database']"
+      },
+      "param_binding": null,
+      "static_value": null,
+      "extract_key": null,
+      "is_irreversible": false,
+      "description": "Execute member query."
+    },
+    {
+      "step_id": 4,
+      "action": "click",
+      "target": {
+        "role": "button",
+        "accessible_name": "Open Sub-Account",
+        "text_content": null,
+        "css_fallback": "input[value='Open Sub-Account']",
+        "xpath_fallback": "//input[@value='Open Sub-Account']"
+      },
+      "param_binding": null,
+      "static_value": null,
+      "extract_key": null,
+      "is_irreversible": false,
+      "description": "Proceed to sub-account module."
+    },
+    {
+      "step_id": 5,
+      "action": "select",
+      "target": {
+        "role": "combobox",
+        "accessible_name": null,
+        "text_content": null,
+        "css_fallback": "#sel_prod",
+        "xpath_fallback": "//select[@id='sel_prod']"
+      },
+      "param_binding": "product_type",
+      "static_value": null,
+      "extract_key": null,
+      "is_irreversible": false,
+      "description": "Select product variant."
+    },
+    {
+      "step_id": 6,
+      "action": "fill",
+      "target": {
+        "role": "textbox",
+        "accessible_name": null,
+        "text_content": null,
+        "css_fallback": "#txt_deposit",
+        "xpath_fallback": "//input[@id='txt_deposit']"
+      },
+      "param_binding": "initial_deposit",
+      "static_value": null,
+      "extract_key": null,
+      "is_irreversible": false,
+      "description": "Provide initial deposit."
+    },
+    {
+      "step_id": 7,
+      "action": "click",
+      "target": {
+        "role": "button",
+        "accessible_name": "Submit & Authorize",
+        "text_content": null,
+        "css_fallback": "input[value='Submit & Authorize']",
+        "xpath_fallback": "//input[@value='Submit & Authorize']"
+      },
+      "param_binding": null,
+      "static_value": null,
+      "extract_key": null,
+      "is_irreversible": true,
+      "description": "Authorize sub-account creation."
+    },
+    {
+      "step_id": 8,
+      "action": "extract",
+      "target": {
+        "role": null,
+        "accessible_name": null,
+        "text_content": null,
+        "css_fallback": "#val_conf_no",
+        "xpath_fallback": "//td[@id='val_conf_no']"
+      },
+      "param_binding": null,
+      "static_value": null,
+      "extract_key": "confirmation_number",
+      "is_irreversible": false,
+      "description": null
+    },
+    {
+      "step_id": 9,
+      "action": "extract",
+      "target": {
+        "role": null,
+        "accessible_name": null,
+        "text_content": null,
+        "css_fallback": "#val_product",
+        "xpath_fallback": "//td[@id='val_product']"
+      },
+      "param_binding": null,
+      "static_value": null,
+      "extract_key": "assigned_product",
+      "is_irreversible": false,
+      "description": null
+    }
+  ],
+  "business_branches": [
+    {
+      "condition_locator": {
+        "role": null,
+        "accessible_name": null,
+        "text_content": "BUSINESS EXCEPTION: Record not found",
+        "css_fallback": null,
+        "xpath_fallback": null
+      },
+      "outcome_code": "MEMBER_NOT_FOUND",
+      "message": "The requested member account does not exist."
+    },
+    {
+      "condition_locator": {
+        "role": null,
+        "accessible_name": null,
+        "text_content": "PERMISSION DENIAL: Member account status is LOCKED",
+        "css_fallback": null,
+        "xpath_fallback": null
+      },
+      "outcome_code": "ACCOUNT_LOCKED",
+      "message": "Member account is locked; servicing prohibited."
+    }
+  ],
+  "success_checkpoint": {
+    "role": null,
+    "accessible_name": null,
+    "text_content": "SUB-ACCOUNT CREATION AUTHORIZED",
+    "css_fallback": "#confirmation_header",
+    "xpath_fallback": null
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "SUCCESS",
+  "outcome_code": null,
+  "message": "Flow verified successfully against checkpoint.",
+  "outputs": {
+    "confirmation_number": "CONF-12345-99281",
+    "assigned_product": "CD_12M"
+  },
+  "failed_step_id": null,
+  "evidence_path": null
+}

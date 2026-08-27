@@ -1,0 +1,34 @@
+{"timestamp": 1787844511.442859, "event": "REPLAY_INITIALIZING", "data": {"inputs": {"member_id": "12345", "product_type": "CD_12M", "initial_deposit": "1000.00"}}}
+{"timestamp": 1787844515.663436, "event": "STEP_START", "data": {"step_id": 1, "action": "navigate"}}
+{"timestamp": 1787844515.727099, "event": "STEP_START", "data": {"step_id": 2, "action": "fill"}}
+{"timestamp": 1787844515.764431, "event": "STEP_START", "data": {"step_id": 3, "action": "click"}}
+{"timestamp": 1787844516.916746, "event": "STEP_START", "data": {"step_id": 4, "action": "click"}}
+{"timestamp": 1787844516.9786339, "event": "STEP_START", "data": {"step_id": 5, "action": "select"}}
+{"timestamp": 1787844516.996622, "event": "STEP_START", "data": {"step_id": 6, "action": "fill"}}
+{"timestamp": 1787844517.0169191, "event": "STEP_START", "data": {"step_id": 7, "action": "click"}}
+{"timestamp": 1787844517.381966, "event": "STEP_START", "data": {"step_id": 8, "action": "extract"}}
+{"timestamp": 1787844517.397803, "event": "STEP_START", "data": {"step_id": 9, "action": "extract"}}
+{"timestamp": 1787844517.407616, "event": "REPLAY_SUCCESS", "data": {"outputs": {"confirmation_number": "CONF-12345-99281", "assigned_product": "CD_12M"}}}
+{"timestamp": 1787844517.499936, "event": "REPLAY_INITIALIZING", "data": {"inputs": {"member_id": "99999", "product_type": "MONEY_MARKET", "initial_deposit": "500.00"}}}
+{"timestamp": 1787844518.369591, "event": "STEP_START", "data": {"step_id": 1, "action": "navigate"}}
+{"timestamp": 1787844518.4177978, "event": "STEP_START", "data": {"step_id": 2, "action": "fill"}}
+{"timestamp": 1787844518.442372, "event": "STEP_START", "data": {"step_id": 3, "action": "click"}}
+{"timestamp": 1787844518.498731, "event": "STEP_START", "data": {"step_id": 4, "action": "click"}}
+{"timestamp": 1787844518.510043, "event": "BUSINESS_OUTCOME_DETECTED", "data": {"outcome": "MEMBER_NOT_FOUND"}}
+{"timestamp": 1787844924.023472, "event": "REPLAY_INITIALIZING", "data": {"inputs": {"member_id": "12345", "product_type": "CD_12M", "initial_deposit": "1000.00"}}}
+{"timestamp": 1787844924.848385, "event": "STEP_START", "data": {"step_id": 1, "action": "navigate"}}
+{"timestamp": 1787844924.9276721, "event": "STEP_START", "data": {"step_id": 2, "action": "fill"}}
+{"timestamp": 1787844924.972546, "event": "STEP_START", "data": {"step_id": 3, "action": "click"}}
+{"timestamp": 1787844925.0317671, "event": "STEP_START", "data": {"step_id": 4, "action": "click"}}
+{"timestamp": 1787844925.091601, "event": "STEP_START", "data": {"step_id": 5, "action": "select"}}
+{"timestamp": 1787844925.1116102, "event": "STEP_START", "data": {"step_id": 6, "action": "fill"}}
+{"timestamp": 1787844925.124553, "event": "STEP_START", "data": {"step_id": 7, "action": "click"}}
+{"timestamp": 1787844925.47857, "event": "STEP_START", "data": {"step_id": 8, "action": "extract"}}
+{"timestamp": 1787844925.494082, "event": "STEP_START", "data": {"step_id": 9, "action": "extract"}}
+{"timestamp": 1787844925.505746, "event": "REPLAY_SUCCESS", "data": {"outputs": {"confirmation_number": "CONF-12345-99281", "assigned_product": "CD_12M"}}}
+{"timestamp": 1787844925.536921, "event": "REPLAY_INITIALIZING", "data": {"inputs": {"member_id": "99999", "product_type": "MONEY_MARKET", "initial_deposit": "500.00"}}}
+{"timestamp": 1787844926.076294, "event": "STEP_START", "data": {"step_id": 1, "action": "navigate"}}
+{"timestamp": 1787844926.116717, "event": "STEP_START", "data": {"step_id": 2, "action": "fill"}}
+{"timestamp": 1787844926.140812, "event": "STEP_START", "data": {"step_id": 3, "action": "click"}}
+{"timestamp": 1787844926.194983, "event": "STEP_START", "data": {"step_id": 4, "action": "click"}}
+{"timestamp": 1787844926.2070951, "event": "BUSINESS_OUTCOME_DETECTED", "data": {"outcome": "MEMBER_NOT_FOUND"}}

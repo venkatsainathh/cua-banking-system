@@ -1,0 +1,8 @@
+{
+  "status": "BUSINESS_OUTCOME",
+  "outcome_code": "MEMBER_NOT_FOUND",
+  "message": "The requested member account does not exist.",
+  "outputs": {},
+  "failed_step_id": null,
+  "evidence_path": null
+}
