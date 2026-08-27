@@ -1,0 +1,15 @@
+{
+  "capability_name": "open_member_subaccount",
+  "total_runs": 5,
+  "successful_runs": 5,
+  "stability_score": "100.0%",
+  "is_approved_for_unattended": true,
+  "avg_execution_time_sec": 0.96,
+  "run_outcomes": [
+    "SUCCESS",
+    "SUCCESS",
+    "SUCCESS",
+    "SUCCESS",
+    "SUCCESS"
+  ]
+}
