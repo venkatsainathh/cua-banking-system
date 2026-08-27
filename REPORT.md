@@ -33,3 +33,12 @@ When element resolution fails or an unexpected dialog appears:
 ## 7. Cuts
 - **Deliberately Cut:** Full WebRTC co-browsing operator frontend (mocked via CLI console handoff with live browser persistence).
 - **Next Steps:** Automated self-healing locator refinement using bounded single-step LLM intervention during replay regressions.
+## 8. Implemented Stretch Goals
+
+### Agent-Facing Capability Interface
+- Implemented `CapabilityCatalog` (`core/catalog.py`), exposing all saved capability artifacts as standard function-calling definitions compatible with upstream LLM agent orchestration frameworks.
+- Allows AI agents to dynamically inspect input schemas, discover capabilities, and execute them by name via `catalog.invoke()`.
+
+### Multi-Run Stability Benchmark & Flakiness Scoring
+- Added multi-run automated benchmarking (`catalog.evaluate_stability()`) that stress-tests capabilities across $N$ headless executions.
+- Generated `evidence/stability_report.json` confirming 100% execution stability and sub-second average latency (0.96s), gating capabilities for unattended production execution.
